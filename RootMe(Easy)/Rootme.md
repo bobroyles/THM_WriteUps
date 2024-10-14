@@ -29,7 +29,7 @@
             nc -nlvp 1234 
         - Once in shell, ran 'find / -type f -name user.txt' to find file
         - cat /var/www/user.txt gave me the flag
-Task 4. Privilege escalation, escalate privileges to root
+# Task 4. Privilege escalation, escalate privileges to root
     - Search for files with SUID permission, which file is weird? 
         find / -type f -user root -perm -u=s
             - this showed me files with SUID permission 
