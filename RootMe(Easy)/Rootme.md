@@ -1,6 +1,6 @@
-RootMe
+# RootMe
 
-Task 2. Reconnaisance, general information about the target. 
+# Task 2. Reconnaisance, general information about the target. 
     Linked IP of attach machine to 'rootme.thm' using (sudo nano /etc/hosts)
     - How many ports are open. (2)
         nmap rootme.thm -T5 -v 
@@ -18,12 +18,12 @@ Task 2. Reconnaisance, general information about the target.
             - Output listed directories on the webserver, including /panel
     - What is the hidden directory. (/panel/)   
 
-Task 3. Getting a shell, upload file and get a reverse shell 
+# Task 3. Getting a shell, upload file and get a reverse shell 
     -Once on '(rootme.thm)./panel' I coudl upload a file to the server
     - Used the php_reverse_shell.php from https://github.com/pentestmonkey/php-reverse-shell 
         - changed listening ip in file to my ip 
         - uploaded to server and got an error stating php files were not allowed
-        - changed name of file from .php to .phtml (idea came from https://book.hacktricks.xyz/pentesting-web/file-upload)
+        - changed name of file from .php to .phtml, idea came from -> [title](https://book.hacktricks.xyz/pentesting-web/file-upload)
         - This worked and I confirmed by checking 'rootme.thm/uploads' which was another directory I found using GoBuster
         - Next, set up listener to receive a connection with the shell 
             nc -nlvp 1234 
@@ -36,7 +36,7 @@ Task 4. Privilege escalation, escalate privileges to root
             - /usr/bin/python, was the weird file 
     - Find a form to escalate your privileges 
         python -c 'import os; os.execl("/bin/sh", "sh", "-p")'
-            - got this from https://gtfobins.github.io/gtfobins/python/
+            - got this from [title](https://gtfobins.github.io/gtfobins/python/)
             - this escalated my priveleges to root
     - root.txt
         find / -type f -name root.txt 2> /dev/null
