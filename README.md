@@ -1,1 +1,1 @@
-Personal Try Hack Me CTF writeups.
+Try Hack Me CTF writeups.
