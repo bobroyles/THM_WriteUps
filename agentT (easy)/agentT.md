@@ -7,7 +7,7 @@
 ## gobuster to check for hidden directories 
     - Every request came back with code 200
 ## Looked up PHP version because it was outdated
-    - Foundout this version was released with a backdoor for remote code execution
+    - Found this version was released with a backdoor for remote code execution
     - Exploit script found at: https://www.exploit-db.com/exploits/49933
     - Once I ran this short script and imported the target IP I had a reverse shell as root user
 ## Exploiting backdoor to find the flag
